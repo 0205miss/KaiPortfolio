@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/hero";
 import Image from "next/image";
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <Hero />
         <Grid />
+        <Footer/>
       </div>
     </main>
   );

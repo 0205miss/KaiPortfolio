@@ -1,6 +1,42 @@
 import { GridBackground } from "./ui/gridbackground";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/text-effect";
+import { TypewriterEffect } from "./ui/typewriter";
+
+const words = [
+  {
+    text: "Hi",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "I'm",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "Lawrence,",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "a",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "software",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "developer",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "from",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+  {
+    text: "Taiwan.",
+    className:"text-sm md:text-lg lg:text-2xl"
+  },
+];
 
 const Hero = () => {
   return (
@@ -26,9 +62,9 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="WenKai, YEH Experience overview"
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Lawrence, a software developer from Taiwan
-          </p>
+          <div className="text-center md:tracking-wider mb-4">
+            <TypewriterEffect words={words} cursorClassName="h-3 md:h-5 lg:h-6"/>
+          </div>
         </div>
       </div>
     </div>
