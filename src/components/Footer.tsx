@@ -14,7 +14,7 @@ const Footer = () => {
           Copyright © 2024 Lawrence
         </p>
         <div className=" space-x-3 mt-3 md:mt-0 z-10">
-          <Button size='icon'>
+          <Button asChild size='icon'>
             <Link href="https://github.com/0205miss">
             <GitHubLogoIcon />
             </Link>
@@ -24,7 +24,11 @@ const Footer = () => {
             <InstagramLogoIcon />
             </Link>
           </Button>
-          <Link href="https://discordapp.com/users/kaikai4ni" className={buttonVariants({ variant: "outline" })+' !cursor-pointer'}><DiscordLogoIcon /></Link>
+          <Button asChild size='icon'>
+            <Link href="https://discordapp.com/users/kaikai4ni">
+            <DiscordLogoIcon />
+            </Link>
+          </Button>
         </div>
       </div>
     </footer>
