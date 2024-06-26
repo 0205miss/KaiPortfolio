@@ -47,6 +47,15 @@ export const BentoGridItem = ({
         className
       )}
     >
+      <div className="w-full h-full absolute flex justify-center items-center">
+        {img && (
+          <img
+            src={img}
+            alt={img}
+            className={cn(imgClassName, "object-cover object-center")}
+          />
+        )}
+      </div>
       <div
         className={cn(
           titleClassName,
@@ -59,9 +68,8 @@ export const BentoGridItem = ({
         <div className="select-none font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
           {description}
         </div>
-        {id === 1 && <div>
-          
-          </div>}
+
+        {id === 1 && <div></div>}
         {id === 2 && <GlobeDisplay />}
         {id === 3 && (
           <div className="flex gap-1 lg:gap-5 w-fit absolute -right-2 lg:-right-2">
